@@ -1165,8 +1165,10 @@ function App() {
       {step >= script.length - 1 && (
         <>
           <h2>SYSTEM FAILURE</h2>
-          <button onClick={resetGame}>START OVER</button>
-        </>
+          <button className="start-over-btn" onClick={resetGame}>
+          START OVER
+          </button>
+</>
       )}
     </div>
   );

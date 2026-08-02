@@ -1371,3 +1371,37 @@ button {
     font-size: 12px;
   }
 }
+
+.start-over-btn {
+  width: 100%;
+  max-width: 540px;
+  min-height: 64px;
+  margin-top: 14px;
+  padding: 16px 24px;
+  background: #9d7cff;
+  color: white;
+  border: 2px solid #b9a4ff;
+  border-radius: 16px;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  box-shadow: 0 0 22px rgba(157, 124, 255, 0.5);
+}
+
+.start-over-btn:hover {
+  background: #b195ff;
+  transform: translateY(-2px);
+}
+
+.start-over-btn:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 600px) {
+  .start-over-btn {
+    max-width: 100%;
+    min-height: 58px;
+    font-size: 18px;
+    border-radius: 14px;
+  }
+}
