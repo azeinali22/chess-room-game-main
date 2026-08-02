@@ -520,3 +520,854 @@ button {
   font-size: 18px;
   text-align: center;
 }
+
+
+
+/* REFEREE */
+
+.referee-entry-btn {
+  width: 100%;
+  max-width: 300px;
+  margin-top: 16px;
+  padding: 14px 18px;
+  background: transparent;
+  color: #9d7cff;
+  border: 2px solid #9d7cff;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.referee-entry-btn:hover {
+  background: #9d7cff;
+  color: white;
+  box-shadow: 0 0 24px rgba(157, 124, 255, 0.75);
+  transform: translateY(-2px);
+}
+
+.referee-screen {
+  justify-content: flex-start;
+  align-items: stretch;
+  max-width: 1250px;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+.referee-topbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.referee-topbar h1 {
+  margin-bottom: 6px;
+  font-size: 34px;
+}
+
+.referee-topbar .subtitle {
+  margin: 0;
+  text-align: left;
+}
+
+.exit-referee-btn {
+  width: auto;
+  padding: 12px 24px;
+  background: #2a2a2a;
+  color: white;
+  border: 1px solid #666;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.exit-referee-btn:hover {
+  background: #950000;
+  border-color: #ff3333;
+}
+
+.referee-board {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.referee-panel {
+  width: 100%;
+}
+
+.referee-panel > h2 {
+  color: #9d7cff;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.referee-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.referee-card {
+  padding: 18px;
+  background: linear-gradient(145deg, #111, #080808);
+  border: 1px solid #393939;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.referee-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #333;
+}
+
+.referee-card-header h3 {
+  margin: 0;
+  color: #9d7cff;
+  font-size: 22px;
+}
+
+.referee-card-header p {
+  margin: 2px 0 0;
+  color: #ddd;
+}
+
+.referee-piece {
+  font-family: "Times New Roman", Georgia, serif;
+  font-size: 45px;
+  line-height: 1;
+}
+
+.referee-piece.white {
+  color: white;
+  -webkit-text-stroke: 1px #111;
+}
+
+.referee-piece.black {
+  color: #111;
+  -webkit-text-stroke: 1.5px white;
+}
+
+.player-status {
+  margin-left: auto;
+  padding: 5px 8px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.player-status.waiting {
+  color: #ddd;
+  background: #333;
+}
+
+.player-status.playing {
+  color: #dfffe8;
+  background: #12632b;
+}
+
+.player-status.finished {
+  color: #ffe7e7;
+  background: #8b1414;
+}
+
+.referee-card-details {
+  padding-top: 10px;
+}
+
+.referee-card-details p {
+  margin: 8px 0;
+  color: #ddd;
+  line-height: 1.4;
+}
+
+.referee-card-details strong {
+  color: white;
+}
+
+.empty-referee-message {
+  padding: 30px;
+  border: 1px dashed #555;
+  border-radius: 14px;
+  color: #aaa;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .referee-screen {
+    padding: 18px 12px 40px;
+  }
+
+  .referee-topbar {
+    align-items: flex-start;
+  }
+
+  .referee-topbar h1 {
+    font-size: 25px;
+    letter-spacing: 3px;
+  }
+
+  .exit-referee-btn {
+    padding: 10px 14px;
+  }
+
+  .referee-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .referee-card {
+    padding: 14px;
+  }
+}
+
+
+/* REFEREE PASSWORD */
+
+.referee-login-popup p {
+  font-size: 17px;
+  color: #ccc;
+}
+
+.referee-password-error {
+  margin-top: -4px;
+  color: #ff6666;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.referee-login-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.referee-login-actions .close-popup-btn {
+  margin-top: 0;
+}
+
+.referee-cancel-btn {
+  padding: 10px 18px;
+  background: #292929;
+  color: white;
+  border: 1px solid #555;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.referee-cancel-btn:hover {
+  background: #3a3a3a;
+}
+
+
+/* PLAYER SLOT AVAILABILITY */
+
+.buttons .player-button {
+  position: relative;
+}
+
+.buttons .player-button:disabled,
+.buttons .player-button.player-taken {
+  cursor: not-allowed;
+  opacity: 0.38;
+  border-color: #555;
+  filter: grayscale(1);
+  transform: none;
+  box-shadow: none;
+}
+
+.buttons .player-button:disabled:hover,
+.buttons .player-button.player-taken:hover {
+  background: rgba(20, 20, 20, 0.95);
+  transform: none;
+  box-shadow: none;
+}
+
+.taken-label {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  padding: 3px 5px;
+  border-radius: 5px;
+  background: #8b1414;
+  color: white !important;
+  font-size: 8px !important;
+  font-weight: bold;
+  letter-spacing: 1px !important;
+}
+
+.player-selection-error {
+  width: 100%;
+  max-width: 420px;
+  margin-top: 12px;
+  padding: 10px 14px;
+  border: 1px solid #ff5555;
+  border-radius: 10px;
+  background: rgba(139, 20, 20, 0.3);
+  color: #ffdddd;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+/* GAME LOBBY */
+
+.player-lobby-screen {
+  text-align: center;
+}
+
+.player-lobby-screen h1 {
+  margin-bottom: 12px;
+  font-size: 38px;
+}
+
+.lobby-piece {
+  margin-bottom: 8px;
+}
+
+.lobby-player-name {
+  color: #9d7cff;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.waiting-indicator {
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+  margin: 24px 0;
+}
+
+.waiting-indicator span {
+  width: 11px;
+  height: 11px;
+  background: #9d7cff;
+  border-radius: 50%;
+  animation: lobbyBounce 1.1s infinite ease-in-out;
+}
+
+.waiting-indicator span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.waiting-indicator span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes lobbyBounce {
+  0%, 60%, 100% {
+    transform: translateY(0);
+    opacity: 0.45;
+  }
+
+  30% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+}
+
+.lobby-ready-count {
+  margin-bottom: 18px;
+  color: #ddd;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.leave-lobby-btn {
+  width: auto;
+  padding: 11px 20px;
+  background: #292929;
+  color: white;
+  border: 1px solid #555;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.leave-lobby-btn:hover {
+  background: #8b1414;
+  border-color: #ff5555;
+}
+
+.referee-lobby-controls {
+  width: 100%;
+  margin-bottom: 28px;
+  padding: 20px;
+  background: #090909;
+  border: 1px solid #333;
+  border-radius: 18px;
+}
+
+.referee-game-status {
+  margin-bottom: 16px;
+  color: #bbb;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.referee-game-status strong {
+  color: #9d7cff;
+}
+
+.referee-lobby-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.lobby-slot {
+  min-height: 130px;
+  padding: 12px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.lobby-slot.ready {
+  background: rgba(18, 99, 43, 0.22);
+  border: 1px solid #2c9b4c;
+}
+
+.lobby-slot.empty {
+  background: #121212;
+  border: 1px dashed #444;
+  opacity: 0.65;
+}
+
+.lobby-slot-piece {
+  font-family: "Times New Roman", Georgia, serif;
+  font-size: 38px;
+  line-height: 1;
+}
+
+.lobby-slot-piece.white {
+  color: white;
+  -webkit-text-stroke: 1px #111;
+}
+
+.lobby-slot-piece.black {
+  color: #111;
+  -webkit-text-stroke: 1.5px white;
+}
+
+.lobby-slot strong {
+  margin-top: 4px;
+  color: #9d7cff;
+  font-size: 18px;
+}
+
+.lobby-slot span {
+  max-width: 100%;
+  overflow: hidden;
+  color: white;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lobby-slot small {
+  margin-top: 5px;
+  color: #aaa;
+  font-size: 9px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.referee-lobby-actions {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.referee-start-game-btn,
+.referee-reset-lobby-btn {
+  padding: 14px 18px;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.referee-start-game-btn {
+  background: #12632b;
+  border: 1px solid #2c9b4c;
+}
+
+.referee-start-game-btn:hover:not(:disabled) {
+  background: #187c38;
+  box-shadow: 0 0 20px rgba(44, 155, 76, 0.45);
+}
+
+.referee-start-game-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.referee-reset-lobby-btn {
+  background: #5f1414;
+  border: 1px solid #b63232;
+}
+
+.referee-reset-lobby-btn:hover {
+  background: #7f1d1d;
+}
+
+@media (max-width: 800px) {
+  .referee-lobby-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .referee-lobby-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 450px) {
+  .referee-lobby-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .player-lobby-screen h1 {
+    font-size: 30px;
+  }
+}
+
+
+/* JOIN LOCK */
+
+.game-in-progress-message {
+  width: 100%;
+  max-width: 420px;
+  margin: 4px 0 14px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: rgba(149, 0, 0, 0.22);
+  border: 1px solid #c93b3b;
+  border-radius: 12px;
+  color: #ffdddd;
+  text-align: center;
+}
+
+.game-in-progress-message strong {
+  color: #ff6666;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.game-in-progress-message span {
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.buttons .player-button.joining-locked {
+  cursor: not-allowed;
+  opacity: 0.25;
+  filter: grayscale(1);
+}
+
+
+/* REFINED REFEREE CONTROLS */
+
+.paused-game-screen {
+  text-align: center;
+}
+
+.pause-icon {
+  margin-bottom: 12px;
+  color: #ffcc66;
+  font-size: 72px;
+  font-weight: bold;
+  letter-spacing: 10px;
+  text-shadow: 0 0 25px rgba(255, 204, 102, 0.55);
+}
+
+.paused-game-screen h1 {
+  color: #ffcc66;
+  font-size: 38px;
+}
+
+.referee-lobby-actions {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.referee-clear-lobby-btn,
+.referee-pause-game-btn,
+.referee-resume-game-btn,
+.referee-restart-game-btn,
+.referee-end-game-btn {
+  padding: 14px 18px;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.referee-clear-lobby-btn {
+  background: #4b4b4b;
+  border: 1px solid #777;
+}
+
+.referee-clear-lobby-btn:hover:not(:disabled) {
+  background: #626262;
+}
+
+.referee-pause-game-btn {
+  background: #8a6200;
+  border: 1px solid #d39a18;
+}
+
+.referee-pause-game-btn:hover {
+  background: #a87800;
+}
+
+.referee-resume-game-btn {
+  background: #12632b;
+  border: 1px solid #2c9b4c;
+}
+
+.referee-resume-game-btn:hover {
+  background: #187c38;
+}
+
+.referee-restart-game-btn {
+  background: #3d2b75;
+  border: 1px solid #8062d6;
+}
+
+.referee-restart-game-btn:hover {
+  background: #513b96;
+}
+
+.referee-end-game-btn {
+  background: #7b1111;
+  border: 1px solid #d43a3a;
+}
+
+.referee-end-game-btn:hover {
+  background: #991919;
+}
+
+.referee-clear-lobby-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+
+/* ADVANCED REFEREE DASHBOARD */
+
+.referee-stats {
+  width: 100%;
+  margin-bottom: 22px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.referee-stats > div {
+  padding: 16px;
+  background: linear-gradient(145deg, #151515, #090909);
+  border: 1px solid #343434;
+  border-radius: 14px;
+  text-align: center;
+}
+
+.referee-stats span {
+  display: block;
+  margin-bottom: 7px;
+  color: #888;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.referee-stats strong {
+  color: #9d7cff;
+  font-size: 24px;
+}
+
+.follow-player-banner {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto 14px;
+  padding: 11px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: rgba(157, 124, 255, 0.14);
+  border: 1px solid #9d7cff;
+  border-radius: 12px;
+  color: #ddd;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.follow-player-banner strong {
+  color: #9d7cff;
+}
+
+.follow-player-banner button {
+  width: auto;
+  padding: 7px 10px;
+  background: #2a2a2a;
+  color: white;
+  border: 1px solid #555;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.referee-card {
+  cursor: pointer;
+}
+
+.referee-card:hover {
+  border-color: #7258c4;
+  transform: translateY(-2px);
+}
+
+.referee-card.selected {
+  border-color: #9d7cff;
+  box-shadow: 0 0 24px rgba(157, 124, 255, 0.35);
+}
+
+.referee-progress {
+  margin-top: 14px;
+}
+
+.referee-progress-label {
+  margin-bottom: 6px;
+  display: flex;
+  justify-content: space-between;
+  color: #999;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.referee-progress-label strong {
+  color: #9d7cff;
+}
+
+.referee-progress-track {
+  height: 8px;
+  overflow: hidden;
+  background: #252525;
+  border-radius: 999px;
+}
+
+.referee-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #6547ba, #9d7cff);
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+.referee-panel-hint {
+  margin: -4px 0 16px;
+  color: #888;
+  font-size: 12px;
+  text-align: center;
+}
+
+.activity-panel {
+  width: 100%;
+  margin-top: 28px;
+  padding: 20px;
+  background: #090909;
+  border: 1px solid #333;
+  border-radius: 18px;
+}
+
+.activity-panel-header {
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.activity-panel-header h2 {
+  margin: 0;
+  color: #9d7cff;
+  font-size: 18px;
+  letter-spacing: 3px;
+}
+
+.activity-panel-header span {
+  color: #777;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.activity-list {
+  max-height: 360px;
+  overflow-y: auto;
+  border-top: 1px solid #2a2a2a;
+}
+
+.activity-item {
+  padding: 10px 4px;
+  display: grid;
+  grid-template-columns: 86px 1fr;
+  gap: 10px;
+  border-bottom: 1px solid #202020;
+  color: #ddd;
+  font-size: 13px;
+}
+
+.activity-time {
+  color: #777;
+  font-family: monospace;
+}
+
+.activity-item.move .activity-message {
+  color: #d8ffe2;
+}
+
+.activity-item.warning .activity-message {
+  color: #ffb0b0;
+}
+
+.activity-item.join .activity-message {
+  color: #d9ccff;
+}
+
+.activity-item.leave .activity-message {
+  color: #ccc;
+}
+
+.activity-item.system .activity-message {
+  color: #ffdc92;
+  font-weight: bold;
+}
+
+@media (max-width: 700px) {
+  .referee-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .follow-player-banner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .activity-item {
+    grid-template-columns: 72px 1fr;
+    font-size: 12px;
+  }
+}
