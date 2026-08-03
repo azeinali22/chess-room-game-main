@@ -319,7 +319,10 @@ function App() {
 
     if (connectedPlayerCount === 0) return;
 
+    // Start every game with a clean activity feed.
+    await remove(ref(db, "activity"));
     await set(ref(db, "game/status"), "playing");
+
     logActivity("system", "Referee started the game");
   }
 
@@ -1165,10 +1168,8 @@ function App() {
       {step >= script.length - 1 && (
         <>
           <h2>SYSTEM FAILURE</h2>
-          <button className="start-over-btn" onClick={resetGame}>
-          START OVER
-          </button>
-</>
+          <button onClick={resetGame}>START OVER</button>
+        </>
       )}
     </div>
   );
